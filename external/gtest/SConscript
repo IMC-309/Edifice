@@ -1,0 +1,8 @@
+Import('env')
+env.Append(CPPPATH = ["#/external/gtest/include"])
+env.Append(LIBPATH = ["#/external/gtest"])
+env.Append(LIBS=["libgtest.a"])
+env.Append(LINKFLAGS='-pthread')
+
+build_env = env.Clone()
+build_env.StaticLibrary('gtest', Glob('src/*.cc'))

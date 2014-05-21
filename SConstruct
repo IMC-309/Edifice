@@ -1,4 +1,8 @@
 env = Environment()
 env.Append(CCFLAGS = ['-std=c++0x'])
+env.Append(CPPPATH = ["#"])
 
-SConscript('helloworld/SConscript', exports=['env'])
+Export("env")
+SConscript('external/SConscript')
+SConscript("tutorial/SConscript")
+

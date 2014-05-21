@@ -2,4 +2,4 @@ Import('env')
 
 build_env = env.Clone()
 build_env.Program("helloworld", "helloworld.cpp")
-build_env.Program("hellocpp0x", "hellocpp0x.cpp")
+build_env.Program("sandbox", "sandbox.cpp")
