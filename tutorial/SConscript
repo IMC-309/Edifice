@@ -3,3 +3,4 @@ Export("env")
 
 SConscript('gtest_demo/SConscript')
 SConscript('helloworld/SConscript')
+SConscript('json_demo/SConscript')

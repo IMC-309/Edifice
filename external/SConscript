@@ -2,4 +2,4 @@ Import('env')
 Export("env")
 
 SConscript(["gtest/SConscript"])
-
+SConscript(["jsoncpp/SConscript"])

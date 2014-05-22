@@ -1,0 +1,7 @@
+Import("env")
+env.Append(CPPPATH = ["#/external/jsoncpp/include"])
+env.Append(LIBPATH = ["#/external/jsoncpp"])
+env.Append(LIBS=["libjsoncpp.a"])
+
+build_env = env.Clone()
+build_env.StaticLibrary('jsoncpp', Glob('src/*.cpp'))
