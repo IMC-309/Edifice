@@ -1,0 +1,9 @@
+Import('env')
+env.Append(CPPPATH = ["#/external/glog/src"])
+env.Append(LIBPATH = ["#/external/glog"])
+env.Append(LIBS=["libglog.a"])
+
+build_env = env.Clone()
+glog_cpp_files = ["src/demangle.cc", "src/logging.cc", "src/raw_logging.cc", 
+				  "src/signalhandler.cc", "src/symbolize.cc", "src/utilities.cc", "src/vlog_is_on.cc"]
+build_env.StaticLibrary("glog", glog_cpp_files)

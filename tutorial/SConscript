@@ -1,6 +1,7 @@
 Import("env")
 Export("env")
 
+SConscript('glog_demo/SConscript')
 SConscript('gtest_demo/SConscript')
 SConscript('helloworld/SConscript')
 SConscript('json_demo/SConscript')

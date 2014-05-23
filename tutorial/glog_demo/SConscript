@@ -1,0 +1,4 @@
+Import('env')
+
+build_env = env.Clone()
+build_env.Program('glog_demo', 'glog_demo.cpp')

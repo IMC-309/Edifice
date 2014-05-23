@@ -1,0 +1,2 @@
+cpps=["demangle.cc", "logging.cc", "raw_logging.cc", "signalhandler.cc", "symbolize.cc", "utilities.cc", "vlog_is_on.cc"]
+StaticLibrary('glog', Glob('*.cc'), CPPPATH="#")
